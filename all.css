@@ -29,3 +29,7 @@ body {
 	padding: 20px;
 	padding-left: 220px;
 }
+
+.flex {
+	display: flex;
+}

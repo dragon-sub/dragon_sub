@@ -3,6 +3,7 @@ body {
 	font-weight: 300;
 	margin: 0;
 	padding: 0;
+	background-color: black;
 }
 
 .sidebar {
@@ -13,4 +14,6 @@ body {
 	left: 0;
 	top: 0;
 	color: #fff;
+	border-color: #fff;
+	border-width: 1px;
 }

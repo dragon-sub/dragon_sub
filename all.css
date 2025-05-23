@@ -16,6 +16,7 @@ body {
 	top: 0;
 	border-color: #fff;
 	border-width: 10px;
+	overflow: auto;
 }
 
 .subtitle {

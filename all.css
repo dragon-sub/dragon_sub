@@ -39,3 +39,7 @@ body {
 	display: flex;
 	flex-direction: column;
 }
+
+::-webkit-scrollbar-track {
+	background-color: #212121;
+}

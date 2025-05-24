@@ -90,3 +90,7 @@ progress {
 	width: 400px;
 	height: auto;
 }
+
+.imgText {
+	font-size: 20px;
+}

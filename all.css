@@ -70,3 +70,15 @@ a:hover {
 	font-size: 30px;
 	font-weight: 700;
 }
+
+progress {
+	-webkit-appearance: none;
+}
+
+::-webkit-progress-bar {
+	background-color: #212121;
+}
+
+::-webkit-progress-value {
+	background-color: #303030;
+}

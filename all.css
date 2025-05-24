@@ -95,3 +95,9 @@ progress {
 	font-size: 20px;
 	padding-left: 20px;
 }
+
+.imgTitle {
+	font-size: 30px;
+	padding-left: 20px;
+	font-weight: 700;
+}

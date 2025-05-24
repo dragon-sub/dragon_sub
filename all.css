@@ -83,7 +83,7 @@ progress {
 }
 
 ::-webkit-progress-value {
-	background-color: #303030;
+	background-color: #505050;
 	border-radius: 5px;
 }
 

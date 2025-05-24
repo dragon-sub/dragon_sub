@@ -73,6 +73,8 @@ a:hover {
 
 progress {
 	-webkit-appearance: none;
+	height: 10px;
+	border-radius: 5px;
 }
 
 ::-webkit-progress-bar {

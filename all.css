@@ -108,3 +108,11 @@ progress {
 	font-size: 25px;
 	padding-left: 240px;
 }
+
+code {
+	background-color: #212121;
+	border-radius: 5px;
+	font-color: #fff;
+	font-size: 20px;
+	font-family: 'Console', serif;
+}

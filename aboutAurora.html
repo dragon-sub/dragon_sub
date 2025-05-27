@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="favicon.ico">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="all.css">
+		<title>主のメモ</title>
+	</head>
+	<body>
+		<div class="flex">
+			<div class="sidebar">
+				<div class="subtitle">dragon_sub</div>
+				<p class="subsubtitle"><a href="https://dragon-sub.github.io/dragon_sub/">ホーム</a></p>
+				<p class="subsubtitle"><a href="https://dragon-sub.github.io/dragon_sub/myNotes">主のメモ</a></p>
+				<p class="subsubtitle"><a href="https://dragon-sub.github.io/dragon_sub/aboutAurora">Aurora言語仕様書</a></p>
+			</div>
+			<div class="column">
+				<br/>
+				<div class="mainText">
+					ここではコーディングする上で得た知識を忘れないように書いています。是非参考にしてください。
+				</div>
+				<br/>
+				<br/>
+				<div class="mainTitle">
+					逆ポーランド記法(RPN)
+				</div>
+				<br/>
+				<div class="mainText">
+					逆ポーランド記法(RPN)とは「後配置記法」とも呼ばれ、演算子を数字の後ろに置く記法である。この記法のメリットは単純な計算(2+4/2、3^4^2)
+					が中間記法よりも処理しやすいことであるが、
+					デメリットとしては方程式(2x=6)などの計算が余計複雑になることが挙げられる。
+				</div>
+				<br/>
+				<div class="mainTitle2">
+					変換方法
+				</div>
+				<br/>
+				<div class="mainText">
+					第一に中間記法の状態からトークンに分解し、リスト「token」にスタック(追加)する。ここでのトークンとは、数値・演算子・記号のことで、20÷(2+3)であれば
+					20, ÷, (, 2, +, 3, )に分解できる。次に、リスト「token」の上から順にトークンを見ていき、それが数値であればリスト「queue」にスタックし、
+					それが演算子であれば次のルールに従ってリスト「stack」もしくは「queue」にスタックする。そのルールというのは、一番最後に「stack」にスタック
+					された演算子(長いので下記aと呼ぶ)の優先度が追加しようとしている演算子(こちらはbと呼ぶ)の優先度よりも高い・同じ場合はaを「queue」に移動させ、
+					bを「stack」にスタックする。それ以外の場合(aの優先度の方がbよりも高い)はそのままbを「queue」にスタックする。大抵の演算子(+,-,*,/)はこの方法
+					で変換できる(例外は後に解説)。続いて括弧の処理だ。開き括弧はそのまま「stack」に追加し、閉じ括弧は「stack」の一番後ろから開き括弧に遭遇するまで
+					「queue」に移動させる。最後に「stack」に残った演算子は後ろから順に「queue」に移動させ、「queue」の項目を一行に繋げる(半角スペースを挟む)。
+				</div>
+				<br/>
+				<div class="mainTitle2">
+					処理方法
+				</div>
+				<br/>
+				<div class="mainText">
+					トークンを復元し、リスト「token」にスタックする。「token」の一番最初のトークンから計算を開始し、それが数値なら「stack」に追加し、演算子なら
+					「stack」の最後の2つをその演算方法に基づいて計算する。これを繰り返すと必ず「stack」は1つの値になる。それが式の答えになる。
+				</div>
+				<br/>
+			</div>
+		</div>
+	</body>
+</html>
